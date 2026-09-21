@@ -1,1 +1,1 @@
-# AdvectionHybridXPINNs
+# HeatHybridXPINNs
