@@ -10,7 +10,7 @@ class Config:
         torch.manual_seed(self.seed)
 
         # Training parameters
-        self.num_epochs = 1000
+        self.num_epochs = 10000
         self.learning_rate = 0.001
 
         # Model parameters
@@ -25,4 +25,4 @@ class Config:
         self.x_max = torch.tensor(1.0)
         self.t_min = torch.tensor(0.0)
         self.t_max = torch.tensor(1.0)
-        self.delta = torch.tensor(0.05)
+        self.delta = torch.tensor(0.33)
