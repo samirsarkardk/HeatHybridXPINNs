@@ -4,10 +4,30 @@ from Aconfig import (Config, DEVICE)
 from Bmodel import (PINN1, PINN2, PINN3, PINN4)
 import os
 
+N = 2000
 
 config = Config()
 delta = config.delta
 
+model1 = PINN1().to(DEVICE)
+model2 = PINN2().to(DEVICE)
+model3 = PINN3().to(DEVICE)
+model4 = PINN4().to(DEVICE)
+
+x_min = config.x_min
+x_max = config.x_max
+t_min = config.t_min
+t_max = config.t_max
+
+x_min.to(DEVICE), x_max.to(DEVICE), t_min.to(DEVICE), t_max.to(DEVICE)
+
+t_mid = (t_max + t_min)/2
+x_mid = (x_max + x_min)/2
+
+x = x_min + (x_max - x_min) * torch.rand(N,1)
+t = t_min + (t_max - t_min) * torch.rand(N,1)
+
+x_mid.to(DEVICE), t_mid.to(DEVICE), x.to(DEVICE), t.to(DEVICE)
 
 def final_solution(x, t, model1, model2, model3, model4, model5,
                    x_mid, t_mid, delta):
