@@ -33,7 +33,6 @@ x_min = config.x_min
 x_max = config.x_max
 t_min = config.t_min
 t_max = config.t_max
-
 x_min.to(DEVICE), x_max.to(DEVICE), t_min.to(DEVICE), t_max.to(DEVICE)
 
 t_mid = (t_max + t_min)/2
