@@ -25,4 +25,4 @@ class Config:
         self.x_max = torch.tensor(1.0)
         self.t_min = torch.tensor(0.0)
         self.t_max = torch.tensor(1.0)
-        self.delta = torch.tensor(0.33)
+        self.delta = torch.tensor(0.003)
