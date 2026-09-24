@@ -128,7 +128,10 @@ class PINN4(nn.Module):
 
         return self.network(inputs)
 
+    
 
 
 
+for param in PINN1().parameters():
+    print(param)
     

@@ -29,6 +29,9 @@ model3.eval()
 model4.eval()
 model5.eval()
 
+for param in model1.parameters():
+    print(param)
+
 x_min = config.x_min
 x_max = config.x_max
 t_min = config.t_min
